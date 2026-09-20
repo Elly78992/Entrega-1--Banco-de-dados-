@@ -30,4 +30,54 @@
 ## 4. Regras de Negócio
 - **Regras operacionais:**
 - **RN01:** O acesso dos equipamentos deve ser vinculado a um usuario por vez, contendo seus registros. Em casos de alteraçoes, o sistema deve encerrar o processo anterior antes de registrar um novo dado.
-- 
+- **RNO2:** As alterações realizadas nos equipamentos, incluindo, manutenções, situações de uso e atualização de cadastro, deve ter um registro permanente dentro do histórico de validação. Cada tarefa deve obter a data, horário e identificador do usuário autorizado.
+- **RNO3:** Antes de haver manutenção dos equipamentos o sistema deve emitir um aviso prévio aos usuários informando o bloqueio temporário das maquinas para novas operações.           
+
+- **Restrições organizacionais:**
+- **RNO1:** Durante o processo de manutenção, o sistema não pode registrar novos colaboradores e nem finalizar inventários ate que o serviço esteja finalizado.
+     
+## 5. Dicionário de Dados Conceitual
+**5.01: Notebook**
+| Atributo | Descrição | Regra de negócio associada |
+|----------|-----------|------------------------------|
+|id| Identificador único do notebook| Chave primaria; deve ser único e obrigatório.|  
+|id_colaborador| Identifica o colaborador ao qual o notebook esta vinculado.| Chave estrangeira; deve referenciar um colaborador cadastrado.|
+|Marca| Identifica a marca do notebook.| Deve corresponder a uma marca cadastrada.|
+|Modelo| Modelo especifico do notebook.| Deve ser informado no cadastro do equipamento.|
+|id_sistema_operacional| Identifica o sistema operacional instalado no notebook.| Chave estrangeira; deve referenciar um sistema operacional cadastrado.|
+|Serial| Numero de serie utilizado para identificar o equipamento.| Deve identificar o notebook de forma unica.|
+|Hostname| Nome utilizado para identificar o notebook na rede/sistema.| Deve ser informado para identificar o equipamento.|
+|Processador| Modelo do processador instalado no notebook.| Deve representar o processador do equipamento cadastrado.|
+|RAM| Quantidade de memoria RAM do notebook.| Deve representar a capacidade de memoria instalada.|
+|HD| Capacidade de armazenamento do notebook.| Deve representar a capacidade de armazenamento do equipamento.|
+|Garantia| Informação sobre a garantia do notebook.| Deve registrar a situação ou período de garantia do equipamento.| 
+|Aquisição| Informação referente a aquisição do notebook.| Deve registrar a data ou informação de aquisição do equipamento.|    
+|Patrimônio| Numero do patrimônio atribuído ao notebook.| Deve identificar o patrimônio do equipamento e não deve se repetir.|   
+|Situação| O estado atual do notebook.| Deve indicar a situação atual do equipamento.|
+
+**5.02: Colaborador**
+| Atributo | Descrição | Regra de negócio associada |
+|----------|-----------|------------------------------|
+
+## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
+- **Entidades reconhecidas:**
+- **Atributos e classificações:**
+- **Relacionamentos pertinentes:**
+-  **Restrições e políticas organizacionais aplicadas ao modelo.**
+
+## 7. Diagrama Entidade-Relacionamento (DER)
+
+## 8. Justificativa Técnica
+
+## 9. Uso de Inteligência Artificial
+
+| Item | O que registrar |
+|------|------------------|
+| **Ferramenta e etapa** | A IA utilizada foi o **Chat gpt** como material de apoio como auxilio de identificação de erros inseridos no fluxograma.| 
+| **Motivação** | Com base nas informações fornecidas, utilizamos a Inteligência Artificial para corrigir possíveis erros que poderiam estar contidos no sequenciamento dos fluxogramas.|   
+| **Prompt(s) utilizados** |“Atue como professor e detecte possíveis erros presentes no fluxogramas.Em seguida, anexamos a imagem do fluxograma feito para que a IA analisasse.|
+| **Resposta recebida** |Claro. Vou analisar como professor, usando como referência o material que você enviou e comparando com o BPMN que você montou. O objetivo aqui é identificar erros, inconsistências e pontos que podem gerar desconto, e não apenas dizer que está certo ou errado. A lógica do processo está correta, mas existem alguns pontos que precisam ser ajustados no BPMN. Os principais problemas estão na conexão dos fluxos, especialmente na comunicação entre **TI → Fornecedor → TI**, e no retorno dos dados incompletos para uma nova verificação. O processo deve manter os três participantes: **Colaborador, TI e Fornecedor**. O Colaborador envia as informações para a TI, que identifica o colaborador e o equipamento, verifica os dados e decide se estão completos. Se não estiverem, deve solicitar as informações novamente. Se estiverem completos, a TI realiza o cadastro/atualização, registra a situação e verifica se é necessário serviço. Quando houver necessidade de serviço, a solicitação deve ser enviada ao **Fornecedor**, que realiza o serviço e informa a conclusão à TI. Depois disso, a TI atualiza as informações, registra a situação e finaliza o processo. Portanto, não é necessário refazer o BPMN do zero. Basta corrigir as conexões gráficas, diferenciar corretamente os fluxos de mensagem e garantir que os dois caminhos de finalização estejam representados.|
+| **Fontes consultadas e verificadas** |A IA não emitiu site específico no momento da pesquisa, entretanto, verificamos nos respectivos sites: https://www.devmedia.com.br/amp/orientacoes-basicas-na-elaboracao-de-um-diagrama-de-classes/37224; https://lucid.co/pt/diagrama/bpmn/tutorial; https://www.devmedia.com.br/amp/mer-e-der-modelagem-de-bancos-de-dados/14332|
+| **Trechos rejeitados ou corrigidos** | Corrigimos partes da estrutura que pareciam errôneas, como as atividades que estavam na lane "fornecedor" do bpmn “Atualizar informações do equipamento”, “Registrar situação” e “Finalizar inventário”, após analisar que pareciam sem sentido no fluxograma, detectando como um erro. Porém, essas informações estavam descritas de acordo com a nossa montagem de dados emitidos, por esse motivo que descartamos essa sugestão da IA.|  
+| **Justificativa da escolha final** | Utilizamos a Inteligência Artificial como um apoio de revisão no trabalho, tendo em vista que cada etapa realizada de forma autorial foi mantida segundo os requisitos coletados da empresa.|
+| **Reflexão crítica** | Ao inserir o prompt e a imagem do fluxograma feito, a IA apresentou vieses ao sugerir a retirada de determinadas atividades previstas no esqueleto autoral, pontuando como desnecessária na compreensão do projeto. Verificamos em outros sites sobre a forma correta de fazer a montagem, desvinculando o uso exclusivo da IA como fonte única.|
