@@ -58,6 +58,45 @@
 **5.02: Colaborador**
 | Atributo | Descrição | Regra de negócio associada |
 |----------|-----------|------------------------------|
+|id| Identificador único do colaborador| Chave primaria; deve ser único e obrigatório.|  
+|Nome| Nome do colaborador| Deve ser informado no cadastro.|
+|Sobrenome| Sobrenome do colaborador| Deve ser informado no cadastro.|
+|Departamento| Departamento em que o colaborador atua| Deve indicar o departamento ao qual o colaborador pertence.|
+|E-mail| Endereço de e-mail do colaborador| Deve ser um e-mail valido e associado ao colaborador.|
+
+**5.03: Celular**
+| Atributo | Descrição | Regra de negócio associada |
+|----------|-----------|------------------------------|
+|id| Identificador único do celular| Chave primaria; deve ser único e obrigatório.|   
+|id_colaborador| Identifica o colaborador responsável pelo celular.| Chave estrangeira; deve referenciar um colaborador cadastrado.|
+|Linha| Numero ou linha telefônica associada ao celular.| Deve identificar a linha utilizada no equipamento.|
+|Aparelho| Modelo do aparelho celular.| Deve ser informado no cadastro.|
+|Patrimônio| Numero do patrimônio atribuído ao celular.| Deve identificar o patrimônio do equipamento e não deve se repetir.|  
+|Serial_Number| Numero de serie do aparelho.| Deve identificar o celular de forma única.| 
+|Imei_1| Primeiro IMEI do aparelho.| Deve corresponder ao IMEI do equipamento.|
+|Imei_2| Segundo IMEI do aparelho.| Deve ser informado quando o aparelho possuir segundo IMEI.| 
+
+**5.04: Marcas**
+| Atributo | Descrição | Regra de negócio associada |
+|----------|-----------|------------------------------|
+|id| Identificador único da marca| Chave primaria; deve ser único e obrigatório.| 
+|Nome| Nome da marca do equipamento| Deve ser informado e não deve haver marcas duplicadas.|
+
+**5.05: Sistema Operacional**
+| Atributo | Descrição | Regra de negócio associada |
+|----------|-----------|------------------------------|
+|id| Identificador único do sistema operacional.| Chave primaria; deve ser único e obrigatório.|  
+|Fabricação| Empresa responsável pela fabricação/desenvolvimento do sistema operacional.| Deve ser informado no cadastro.| 
+|Tipo| Tipo ou categoria do sistema operacional.| Deve representar o tipo correspondente ao sistema cadastrado.|
+|Versão| Versão do sistema operacional.| Deve identificar a versão instalada no equipamento.|
+
+**5.06: Validação**
+| Atributo | Descrição | Regra de negócio associada |
+|----------|-----------|------------------------------|
+|id| Identificador único da validação.| Chave primaria; único e obrigatório.|
+|id_notebook| Identifica o notebook que esta sendo validado.| Chave estrangeira; deve referenciar um notebook cadastrado.|
+|Data| Data em que a validação foi realizada.| Deve conter uma data valida e ser registrada no momento da validação.|
+|Responsável| Identifica o responsável pela realização da validação.| Deve registrar o responsável pela validação.|
 
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 - **Entidades reconhecidas:**
