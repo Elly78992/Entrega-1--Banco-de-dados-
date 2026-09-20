@@ -12,7 +12,9 @@
 
 ## 2. Processos de Negócio
 - **Principais processos mapeados:**
-  
+## Diagrama BPMN
+
+![BPMN](5006094995982847339.jpg)
 
 ## 3. Requisitos do Sistema
 ### 3.1 Requisitos Funcionais
