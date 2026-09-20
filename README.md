@@ -11,6 +11,8 @@
 - **Evidências da organização:**
 
 ## 2. Processos de Negócio
+- **Principais processos mapeados:**
+  
 
 ## 3. Requisitos do Sistema
 ### 3.1 Requisitos Funcionais
@@ -128,25 +130,25 @@
 
 **Colaborador ➝ Celular**
 Um colaborador pode estar associado a celulares, e o celular possui o id_colaborador para identificar seu responsável. 
-- COLABORADOR E RESPONSAVEL POR CELULAR 
+COLABORADOR E RESPONSAVEL POR CELULAR 
 
 **Colaborador ➝ Notebook**
 Um colaborador pode estar associado a notebooks, enquanto cada notebook cadastrado possui um colaborador associado por meio de id_colaborador. 
--COLABORADOR E RESPONSAVEL POR NOTEBOOK
+COLABORADOR E RESPONSAVEL POR NOTEBOOK
 
 **Marcas ➝ Notebook**
 Uma marca pode estar relacionada a vários notebooks, enquanto cada notebook possui uma marca associada. 
--MARCA IDENTIFICA NOTEBOOK
+MARCA IDENTIFICA NOTEBOOK
 
 **Sistema_operacional ➝ Notebook**
 Um sistema operacional pode estar associado a vários notebooks, enquanto cada notebook possui um sistema operacional identificado por id_sistema_operacional. 
--SISTEMA OPERACIONAL ESTA INSTALAOO NO NOTEBOOK
+SISTEMA OPERACIONAL ESTA INSTALAOO NO NOTEBOOK
 
 **Notebook ➝ Validação**
 Um notebook pode possuir registros de validação, permitindo registrar a data e o responsável por cada validação. 
-- NOTEBOOK POSSUI VALIDAÇAO 
+NOTEBOOK POSSUI VALIDAÇAO 
 
--  **Restrições e políticas organizacionais aplicadas ao modelo.**
+-**Restrições e políticas organizacionais aplicadas ao modelo.**
 
 - Cada entidade possui um identificador único (id), utilizado para diferenciar seus registros.
 - As chaves estrangeiras devem corresponder a registros existentes nas entidades relacionadas.
