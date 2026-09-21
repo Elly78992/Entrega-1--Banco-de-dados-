@@ -22,7 +22,7 @@ O CNA utiliza recursos da área de TI, para auxiliar em suas atividades. Utiliza
 
 ## Diagrama de classes
 
-![Diagrama](Diagramadeclasses.pdf)
+![Diagrama](Diagramadeclasses.png)
 
 ## 3. Requisitos do Sistema
 ### 3.1 Requisitos Funcionais
