@@ -20,6 +20,10 @@ O CNA utiliza recursos da área de TI, para auxiliar em suas atividades. Utiliza
 
 ![BPMN](5006094995982847339.jpg)
 
+## Diagrama de classes
+
+![Diagrama](Diagramadeclasses.pdf)
+
 ## 3. Requisitos do Sistema
 ### 3.1 Requisitos Funcionais
 - **RF01(Aceitabilidade de cadastro):** O sistema deve cadastrar celulares e computadores, destacando o modelo, fabricante, endereço IP, numero de serie e data de aquisiçao.
