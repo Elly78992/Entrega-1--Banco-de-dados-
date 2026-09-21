@@ -181,7 +181,10 @@ Um notebook pode possuir registros de validação, permitindo registrar a data e
 ![DER](unicid-clone-1.pdf)
 
 ## 8. Justificativa Técnica
-
+Cada atributo está relacionado a sua respectiva função dentro do processo. A empresa CNA é responsável por fornecer os equipamentos e insere os dados dos clientes e funcionários que utilizam as máquinas, ou desejam solicitar serviços à filial TecNews. 
+As entidades: “fornecedores” recebe a cardinalidade 1:N ->em conjunto com os equipamentos N:1-> notebook e 1:N-> celular por representar que mais de um equipamento que pode ser utilizado para contatos e monitoramento dos sites. 
+“Clientes”, vinculado com a chave primária (PK)-> Celular 1:N e Serviços ->N:1 é responsável pela solicitação de serviços de TI  necessários para seu dispositivo móvel. 
+“Validação” -> 1:N -> “Produto” Indica a verificação realizada pelo operador sobre o funcionamento do produto, inserindo a data e o id do responsável.
 ## 9. Uso de Inteligência Artificial
 
 | Item | O que registrar |
