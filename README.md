@@ -2,16 +2,20 @@
 ## Metadados
 
 - **Nomes dos alunos e RGM**
-
+- Caroline Barroso de Oliveira RGM:4806351-7
+- Danielly Mariano da Costa RGM:4781783-6
+- 
 ## 1. Caracterização da Organização
 - **Nome e natureza da organização:** 
-- **Contexto e porte:** 
+- **Contexto e porte:**
+O CNA utiliza recursos da área de TI, para auxiliar em suas atividades. Utilizam serviços TecNews, no qual é uma empresa especializada em serviços de tecnologia da informação, sendo eles: Suporte N1 e N2, Service Desk e Help Desk, monitoração de links e sites, além de suporte e gerenciamento de redes.
 - **Problemas e necessidades identificados:**
 - **Justificativa da escolha:**
 - **Evidências da organização:**
 
 ## 2. Processos de Negócio
 - **Principais processos mapeados:**
+- **Fluxogramas:** 
 ## Diagrama BPMN
 
 ![BPMN](5006094995982847339.jpg)
