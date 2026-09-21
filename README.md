@@ -131,24 +131,27 @@
 - **Relacionamentos pertinentes:**
 
 **Colaborador ➝ Celular**
+
 Um colaborador pode estar associado a celulares, e o celular possui o id_colaborador para identificar seu responsável. 
-COLABORADOR E RESPONSAVEL POR CELULAR 
+
 
 **Colaborador ➝ Notebook**
+
 Um colaborador pode estar associado a notebooks, enquanto cada notebook cadastrado possui um colaborador associado por meio de id_colaborador. 
-COLABORADOR E RESPONSAVEL POR NOTEBOOK
 
 **Marcas ➝ Notebook**
+
 Uma marca pode estar relacionada a vários notebooks, enquanto cada notebook possui uma marca associada. 
-MARCA IDENTIFICA NOTEBOOK
 
 **Sistema_operacional ➝ Notebook**
+
 Um sistema operacional pode estar associado a vários notebooks, enquanto cada notebook possui um sistema operacional identificado por id_sistema_operacional. 
-SISTEMA OPERACIONAL ESTA INSTALAOO NO NOTEBOOK
+
 
 **Notebook ➝ Validação**
+
 Um notebook pode possuir registros de validação, permitindo registrar a data e o responsável por cada validação. 
-NOTEBOOK POSSUI VALIDAÇAO 
+
 
 -**Restrições e políticas organizacionais aplicadas ao modelo.**
 
