@@ -112,6 +112,22 @@ O CNA utiliza recursos da área de TI, para auxiliar em suas atividades. Utiliza
 |Data| Data em que a validação foi realizada.| Deve conter uma data valida e ser registrada no momento da validação.|
 |Responsável| Identifica o responsável pela realização da validação.| Deve registrar o responsável pela validação.|
 
+**5.07: Serviço**
+| Atributo | Descrição | Regra de negócio associada |
+|----------|-----------|------------------------------|
+|id| Identificador único do serviço.| Chave primaria; deve ser único e obrigatório.|  
+|Tipo| Tipo do serviço solicitado.| Deve indicar a categoria do serviço realizado ou solicitado.|
+|Descrição| Detalhamento do serviço.| Deve descrever o serviço de forma clara.| 
+|Serviço| Nome ou identificação do serviço.| Deve ser informado para identificar o serviço.|
+
+**5.08: Fornecedor**
+| Atributo | Descrição | Regra de negócio associada |
+|----------|-----------|------------------------------|
+|id| Identificador único do fornecedor.| Chave primaria; deve ser único e obrigatório.| 
+|Nome| Nome do fornecedor.| Deve ser informado no cadastro.|
+|Cnpj| CNPJ do fornecedor.| Deve identificar o fornecedor de forma única e possuir formato valido.| 
+|Contato| Informação de contato do fornecedor.| Deve conter um meio de contato valido.|
+
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 - **Entidades reconhecidas:**
 
