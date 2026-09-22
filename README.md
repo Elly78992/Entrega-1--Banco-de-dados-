@@ -131,28 +131,37 @@ O CNA utiliza recursos da área de TI, para auxiliar em suas atividades. Utiliza
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 - **Entidades reconhecidas:**
 
-   **Colaborador:** Representa os funcionários da empresa que utilizam ou são responsáveis pelos equipamentos.
+   **Equipamento:** Representa os equipamentos de tecnologia utilizados pela organização. E a entidade geral que possui caracteristicas comuns aos diferentes tipos de equipamentos.
+   
+   **Colaborador:** Representa os colaboradores da empresa que utilizam equipamentos e solicitam serviços.
 
-  **Celular:** Representa os aparelhos celulares disponibilizados pela organização aos colaboradores, contendo informações de identificação e características do equipamento.
+  **Celular:** Representa os celulares disponibilizados pela organização aos colaboradores, contendo informações de identificação e características do equipamento.
 
   **Notebook:** Representa os notebooks utilizados na empresa , armazenando informações de identificação, configuração, aquisição, garantia e situação do equipamento.
 
   **Marcas:** Representa as marcas dos notebooks cadastrados, permitindo organizar e identificar a marca de cada equipamento.
 
-  **Sistemas_operacionais:** Representa os sistemas operacionais utilizados nos notebooks, armazenando informações sobre fabricação, tipo e versão.
+  **Sistemas_operacionais:** Representa os sistemas operacionais utilizados nos equipamentos.
 
-  **Validação:**  Representa os registros de validação dos notebooks, permitindo acompanhar quando o equipamento foi validado e quem foi o responsável.  
+  **Validação:**  Representa os registros de validação nos equipamentos.
+
+  **Serviço:** Representa os serviços que podem ser solicitados pelo colaboradores.
+
+  **Fornecedores:** Representa as empresas ou organizações responsáveis pelo fornecimento dos equipamentos.  
 
 - **Atributos e classificações:**
 
 | Entidade | Atributos |
 |----------|-----------|
-| Colaborador| id, Nome, Sobrenome, Departamento, E-mail|
+| Equipamento| id, modelo, serial, patrimônio.| 
+| Colaboradores| id, Nome, Sobrenome, Departamento, E-mail|
 | Celular| id, id_colaborador, Linha, Aparelho, Patrimônio, Serial_number, Imei_1, Imei_2|
 | Notebook| id, id_colaborador, Marca, Modelo, id_sistema_operacional, Serial, Hostname, Processador, RAM, HD, Garantia, Aquisição, Patrimônio, Situação.|
 |Marcas| id, Nome|
 |Sistema_operacional| id, Fabricação, Tipo, Versão.|
 |Validação| id, id_notebook, Data, Responsável.|  
+|Fornecedores| id, Nome, Cnpj, Contato.|
+|Serviço| id, Tipo, Descrição, Serviço.|
 
 - **Relacionamentos pertinentes:**
 
