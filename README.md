@@ -12,6 +12,11 @@
 O CNA utiliza recursos da área de TI, para auxiliar em suas atividades. Utilizam serviços TecNews, no qual é uma empresa especializada em serviços de tecnologia da informação, sendo eles: Suporte N1 e N2, Service Desk e Help Desk, monitoração de links e sites, além de suporte e gerenciamento de redes. O volume é baixo; Quantidade de cadastros é menor que 1.000 linhas; As modificações dos dados é feita manualmente; As consultas e operações de leitura e escrita são de baixo volume.
 
 - **Problemas e necessidades identificados:**
+Já ocorreram situações de informações importantes serem perdidas, duplicadas ou estarem incorretas.
+Antes do sistema atual, as informações eram controladas de maneira menos eficaz e não havia correlação.
+Não havia padronização para identificar o tempo necessário para encontrar informações.
+Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, integração, padronização, versionamento e controle das alterações.
+ 
 - **Justificativa da escolha:**
 - **Evidências da organização:**
 
