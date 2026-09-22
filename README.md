@@ -203,7 +203,7 @@ Um notebook pode possuir registros de validação, permitindo registrar a data e
 
 ## Diagrama Entidade-Relacionamento
 
-![DER](unicid-clone-1.pdf)
+
 
 ## 8. Justificativa Técnica
 Cada atributo está relacionado a sua respectiva função dentro do processo. A empresa CNA é responsável por fornecer os equipamentos e insere os dados dos clientes e funcionários que utilizam as máquinas, ou desejam solicitar serviços à filial TecNews. 
