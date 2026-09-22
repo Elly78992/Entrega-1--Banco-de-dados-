@@ -4,7 +4,7 @@
 - **Nomes dos alunos e RGM**
 - Caroline Barroso de Oliveira RGM:4806351-7
 - Danielly Mariano da Costa RGM:4781783-6
-- Maria Eduarda Kostkievicz Ferreira RGM:
+- Maria Eduarda Kostkievicz Ferreira RGM:4790715-1
   
 ## 1. Caracterização da Organização
 - **Nome e natureza da organização:** 
