@@ -214,7 +214,7 @@ Um notebook pode possuir registros de validação, permitindo registrar a data e
 
 ## 7. Diagrama Entidade-Relacionamento (DER)
 
-
+![DER](DER.png)
 
 
 ## 8. Justificativa Técnica
