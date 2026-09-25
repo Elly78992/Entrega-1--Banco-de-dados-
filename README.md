@@ -56,13 +56,21 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
 - **RNO1:** Durante o processo de manutenção, o sistema não pode registrar novos colaboradores e nem finalizar inventários ate que o serviço esteja finalizado.
      
 ## 5. Dicionário de Dados Conceitual
-**5.01: Notebook**
+**5.01: Equipamentos**
+| Atributo | Descrição | Regra de negócio associada |
+|----------|-----------|----------------------------|
+| id | Identificador único do equipamento | Chave primária; deve ser único e obrigatório. |
+| Modelo | O modelo do equipamento | Deve identificar o modelo do equipamento cadastrado. |
+| Serial | Numero da serie do equipamento | Deve identificar o equipamento de forma única. |
+| Patrimônio | Numero do patrimônio atribuído ao equipamento | Deve identificar o patrimônio do equipamento e não deve se repetir.. |
+
+**5.02: Notebook**
 | Atributo | Descrição | Regra de negócio associada |
 |----------|-----------|------------------------------|
 |id| Identificador único do notebook| Chave primaria; deve ser único e obrigatório.|  
 |id_colaborador| Identifica o colaborador ao qual o notebook esta vinculado.| Chave estrangeira; deve referenciar um colaborador cadastrado.|
-|Marca| Identifica a marca do notebook.| Deve corresponder a uma marca cadastrada.|
-|Modelo| Modelo especifico do notebook.| Deve ser informado no cadastro do equipamento.|
+|Marca| Identifica a marca do notebook| Deve corresponder a uma marca cadastrada.|
+|Modelo| Modelo especifico do notebook| Deve ser informado no cadastro do equipamento.|
 |id_sistema_operacional| Identifica o sistema operacional instalado no notebook.| Chave estrangeira; deve referenciar um sistema operacional cadastrado.|
 |Serial| Numero de serie utilizado para identificar o equipamento.| Deve identificar o notebook de forma unica.|
 |Hostname| Nome utilizado para identificar o notebook na rede/sistema.| Deve ser informado para identificar o equipamento.|
@@ -74,7 +82,7 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
 |Patrimônio| Numero do patrimônio atribuído ao notebook.| Deve identificar o patrimônio do equipamento e não deve se repetir.|   
 |Situação| O estado atual do notebook.| Deve indicar a situação atual do equipamento.|
 
-**5.02: Colaborador**
+**5.03: Colaborador**
 | Atributo | Descrição | Regra de negócio associada |
 |----------|-----------|------------------------------|
 |id| Identificador único do colaborador| Chave primaria; deve ser único e obrigatório.|  
@@ -83,7 +91,7 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
 |Departamento| Departamento em que o colaborador atua| Deve indicar o departamento ao qual o colaborador pertence.|
 |E-mail| Endereço de e-mail do colaborador| Deve ser um e-mail valido e associado ao colaborador.|
 
-**5.03: Celular**
+**5.04: Celular**
 | Atributo | Descrição | Regra de negócio associada |
 |----------|-----------|------------------------------|
 |id| Identificador único do celular| Chave primaria; deve ser único e obrigatório.|   
@@ -95,43 +103,43 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
 |Imei_1| Primeiro IMEI do aparelho.| Deve corresponder ao IMEI do equipamento.|
 |Imei_2| Segundo IMEI do aparelho.| Deve ser informado quando o aparelho possuir segundo IMEI.| 
 
-**5.04: Marcas**
+**5.05: Marcas**
 | Atributo | Descrição | Regra de negócio associada |
 |----------|-----------|------------------------------|
 |id| Identificador único da marca| Chave primaria; deve ser único e obrigatório.| 
 |Nome| Nome da marca do equipamento| Deve ser informado e não deve haver marcas duplicadas.|
 
-**5.05: Sistema Operacional**
+**5.06: Sistema Operacional**
 | Atributo | Descrição | Regra de negócio associada |
-|----------|-----------|------------------------------|
+|----------|-----------|----------------------------|
 |id| Identificador único do sistema operacional.| Chave primaria; deve ser único e obrigatório.|  
 |Fabricação| Empresa responsável pela fabricação/desenvolvimento do sistema operacional.| Deve ser informado no cadastro.| 
-|Tipo| Tipo ou categoria do sistema operacional.| Deve representar o tipo correspondente ao sistema cadastrado.|
-|Versão| Versão do sistema operacional.| Deve identificar a versão instalada no equipamento.|
+|Tipo| Tipo ou categoria do sistema operacional| Deve representar o tipo correspondente ao sistema cadastrado.|
+|Versão| Versão do sistema operacional| Deve identificar a versão instalada no equipamento.|
 
-**5.06: Validação**
+**5.07: Validação**
 | Atributo | Descrição | Regra de negócio associada |
-|----------|-----------|------------------------------|
+|----------|-----------|----------------------------|
 |id| Identificador único da validação.| Chave primaria; único e obrigatório.|
 |id_notebook| Identifica o notebook que esta sendo validado.| Chave estrangeira; deve referenciar um notebook cadastrado.|
 |Data| Data em que a validação foi realizada.| Deve conter uma data valida e ser registrada no momento da validação.|
 |Responsável| Identifica o responsável pela realização da validação.| Deve registrar o responsável pela validação.|
 
-**5.07: Serviço**
+**5.08: Serviço**
 | Atributo | Descrição | Regra de negócio associada |
-|----------|-----------|------------------------------|
-|id| Identificador único do serviço.| Chave primaria; deve ser único e obrigatório.|  
-|Tipo| Tipo do serviço solicitado.| Deve indicar a categoria do serviço realizado ou solicitado.|
-|Descrição| Detalhamento do serviço.| Deve descrever o serviço de forma clara.| 
-|Serviço| Nome ou identificação do serviço.| Deve ser informado para identificar o serviço.|
+|----------|-----------|----------------------------|
+| id | Identificador único do serviço | Chave primária; deve ser único e obrigatório. |
+| Tipo | Tipo do serviço solicitado | Deve indicar a categoria do serviço realizado ou solicitado. |
+| Descrição | Detalhadamento do serviço | Descrever o serviço de forma clara. |
+| Serviço | Nome ou identificação do serviço | Deve ser informado para identificar o serviço. |
 
-**5.08: Fornecedor**
+**5.09: Fornecedor**
 | Atributo | Descrição | Regra de negócio associada |
-|----------|-----------|------------------------------|
-|id| Identificador único do fornecedor.| Chave primaria; deve ser único e obrigatório.| 
-|Nome| Nome do fornecedor.| Deve ser informado no cadastro.|
-|Cnpj| CNPJ do fornecedor.| Deve identificar o fornecedor de forma única e possuir formato valido.| 
-|Contato| Informação de contato do fornecedor.| Deve conter um meio de contato valido.|
+|----------|-----------|----------------------------|
+| id | Identificador único do Fornecedor | Chave primária; deve ser único e obrigatório. |
+| Nome | Nome do fornecedor | Deve ser informado no cadastro. |
+| CNPJ | CNPJ do fornecedor | Identificar o fornecedor de forma única e possuir formato valido. |
+| Contato | Informação de contato do fornecedor | Deve conter um meio de contato valido. |
 
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 - **Entidades reconhecidas:**
