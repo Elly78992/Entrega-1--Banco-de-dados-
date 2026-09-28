@@ -1,4 +1,4 @@
-# Entrega-1--Banco-de-dados-
+# Modelagem--Banco-de-dados-
 ## Metadados
 
 - **Nomes dos alunos e RGM**
@@ -7,7 +7,7 @@
 - Maria Eduarda Kostkievicz Ferreira RGM:4790715-1
   
 ## 1. Caracterização da Organização
-- **Nome e natureza da organização:** 
+- **Nome e natureza da organização:** CNA, que utiliza serviços da filial TecNews 
 - **Contexto e porte:**
 O CNA utiliza recursos da área de TI, para auxiliar em suas atividades. Utilizam serviços TecNews, no qual é uma empresa especializada em serviços de tecnologia da informação, sendo eles: Suporte N1 e N2, Service Desk e Help Desk, monitoração de links e sites, além de suporte e gerenciamento de redes. O volume é baixo; Quantidade de cadastros é menor que 1.000 linhas; As modificações dos dados é feita manualmente; As consultas e operações de leitura e escrita são de baixo volume.
 
@@ -56,7 +56,7 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
 - **RNO1:** Durante o processo de manutenção, o sistema não pode registrar novos colaboradores e nem finalizar inventários ate que o serviço esteja finalizado.
      
 ## 5. Dicionário de Dados Conceitual
-**5.01: Equipamentos**
+**5.01: Equipamento**
 | Atributo | Descrição | Regra de negócio associada |
 |----------|-----------|----------------------------|
 | id | Identificador único do equipamento | Chave primária; deve ser único e obrigatório. |
@@ -142,66 +142,68 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
 | Contato | Informação de contato do fornecedor | Deve conter um meio de contato valido. |
 
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
-- **Entidades reconhecidas:**
+ **6.01:Entidades reconhecidas:**
 
-   **Equipamento:** Representa os equipamentos de tecnologia utilizados pela organização. E a entidade geral que possui caracteristicas comuns aos diferentes tipos de equipamentos.
+   **Equipamento:** Representa os equipamentos tecnológicos utilizados pela organização, sendo celulares e notebooks.
    
-   **Colaborador:** Representa os colaboradores da empresa que utilizam equipamentos e solicitam serviços.
+   **Colaborador:** Representa os funcionários que utilizam os equipamentos e solicitam os serviços. 
 
-  **Celular:** Representa os celulares disponibilizados pela organização aos colaboradores, contendo informações de identificação e características do equipamento.
-
-  **Notebook:** Representa os notebooks utilizados na empresa , armazenando informações de identificação, configuração, aquisição, garantia e situação do equipamento.
+  **Celular:** Representa os aparelhos celulares disponibilizados pela organização aos colaboradores.
+  
+  **Notebook:** Representa os notebooks utilizados pelos colaboradores.
 
   **Marcas:** Representa as marcas dos notebooks cadastrados, permitindo organizar e identificar a marca de cada equipamento.
 
   **Sistemas_operacionais:** Representa os sistemas operacionais utilizados nos equipamentos.
 
-  **Validação:**  Representa os registros de validação nos equipamentos.
+  **Validação:** Registra as validações realizadas nos equipamentos, permitindo acompanhar alterações e responsáveis.  
 
-  **Serviço:** Representa os serviços que podem ser solicitados pelo colaboradores.
+  **Serviço:** Representa os serviços solicitados pelos colaboradores.
 
   **Fornecedores:** Representa as empresas ou organizações responsáveis pelo fornecimento dos equipamentos.  
 
-- **Atributos e classificações:**
+**6.02:Atributos e classificações:**
 
-| Entidade | Atributos |
-|----------|-----------|
-| Equipamento| id, modelo, serial, patrimônio.| 
-| Colaboradores| id, Nome, Sobrenome, Departamento, E-mail|
-| Celular| id, id_colaborador, Linha, Aparelho, Patrimônio, Serial_number, Imei_1, Imei_2|
-| Notebook| id, id_colaborador, Marca, Modelo, id_sistema_operacional, Serial, Hostname, Processador, RAM, HD, Garantia, Aquisição, Patrimônio, Situação.|
-|Marcas| id, Nome|
-|Sistema_operacional| id, Fabricação, Tipo, Versão.|
-|Validação| id, id_notebook, Data, Responsável.|  
-|Fornecedores| id, Nome, Cnpj, Contato.|
-|Serviço| id, Tipo, Descrição, Serviço.|
+**Equipamento** = id, modelo, serial, patrimônio 
 
-- **Relacionamentos pertinentes:**
+**Celular** = id, id_colaborador, Linha, Aparelho, Patrimônio, Serial_number, Imei_1, Imei_2
 
-**Colaborador ➝ Celular**
+**Notebook** = id, id_colaborador, Marca, Modelo, id_sistema_operacional, Serial, Hostname, Processador, RAM, HD, Garantia, Aquisição, Patrimônio, Situação
 
-Um colaborador pode estar associado a celulares, e o celular possui o id_colaborador para identificar seu responsável. 
+**Colaborador** = id, Nome, e-mail, Departamento, Sobrenome
+
+**Marca** = id, Nome
+
+**Sistema Operacional** = id, Fabricação, Tipo, Versão
+
+**Fornecedores** = id, Nome, Cnpj, Contato
+
+**Validação** = id, id_notebook, Data, Responsável
+
+**Serviço** = id, Tipo, Descrição, Serviço
+
+**6.03:Relacionamentos pertinentes:**
+
+- **Fornecedor ➝ Equipamento:** relaciona os fornecedores que utilizam os equipamentos.
+
+- **Equipamento ➝ Marca:** relaciona cada equipamento a sua marca.
+
+- **Equipamento ➝ Celular e Notebook:** representa os dois tipos de equipamentos controlados pela organização. 
+
+- **Equipamento ➝ Sistema Operacional:** relaciona os equipamentos aos seus respectivos sistemas operacionais.
+
+- **Celular ➝ Colaborador:** relaciona o celular ao colaborador que o utiliza.
+
+- **Notebook ➝ Colaborador:** relaciona o notebook ao colaborador que o utiliza.
+
+- **Colaborador ➝ Serviço:** relaciona os colaboradores aos serviços solicitados.
+
+- **Notebook ➝ Validação:** relaciona os notebooks aos seus registros de validação.
+
+- **Sistema Operacional ➝ Validação:** relaciona o sistema operacional aos registros de validação.  
 
 
-**Colaborador ➝ Notebook**
-
-Um colaborador pode estar associado a notebooks, enquanto cada notebook cadastrado possui um colaborador associado por meio de id_colaborador. 
-
-**Marcas ➝ Notebook**
-
-Uma marca pode estar relacionada a vários notebooks, enquanto cada notebook possui uma marca associada. 
-
-**Sistema_operacional ➝ Notebook**
-
-Um sistema operacional pode estar associado a vários notebooks, enquanto cada notebook possui um sistema operacional identificado por id_sistema_operacional. 
-
-
-**Notebook ➝ Validação**
-
-Um notebook pode possuir registros de validação, permitindo registrar a data e o responsável por cada validação. 
-
-
--**Restrições e políticas organizacionais aplicadas ao modelo.**
+**6.04:Restrições e políticas organizacionais aplicadas ao modelo.**
 
 - Cada entidade possui um identificador único (id), utilizado para diferenciar seus registros.
 - As chaves estrangeiras devem corresponder a registros existentes nas entidades relacionadas.
