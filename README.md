@@ -25,7 +25,8 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
 - **Fluxogramas:** 
 ## Diagrama BPMN
 
-![BPMN](5006094995982847339.jpg)
+
+![BPMN](Descrição-BPMN.jpg)
 
 ## Diagrama de classes
 
