@@ -131,18 +131,18 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
 **5.08: Serviço**
 | Atributo | Descrição | Regra de negócio associada |
 |----------|-----------|----------------------------|
-| id | Identificador único do serviço | Chave primária; deve ser único e obrigatório. |
-| Tipo | Tipo do serviço solicitado | Deve indicar a categoria do serviço realizado ou solicitado. |
-| Descrição | Detalhadamento do serviço | Descrever o serviço de forma clara. |
+| id | Identificador único do serviço | Chave primária; deve ser único e obrigatório.|
+| Tipo | Tipo do serviço solicitado | Deve indicar a categoria do serviço realizado ou solicitado.|
+| Descrição | Detalhadamento do serviço | Descrever o serviço de forma clara.|
 | Serviço | Nome ou identificação do serviço | Deve ser informado para identificar o serviço. |
 
 **5.09: Fornecedor**
 | Atributo | Descrição | Regra de negócio associada |
 |----------|-----------|----------------------------|
-| id | Identificador único do Fornecedor | Chave primária; deve ser único e obrigatório. |
-| Nome | Nome do fornecedor | Deve ser informado no cadastro. |
-| CNPJ | CNPJ do fornecedor | Identificar o fornecedor de forma única e possuir formato valido. |
-| Contato | Informação de contato do fornecedor | Deve conter um meio de contato valido. |
+| id | Identificador único do Fornecedor| Chave primária; deve ser único e obrigatório.|
+| Nome | Nome do fornecedor | Deve ser informado no cadastro.|
+| CNPJ | CNPJ do fornecedor | Identificar o fornecedor de forma única e possuir formato valido.|
+| Contato | Informação de contato do fornecedor | Deve conter um meio de contato valido.|
 
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
  **6.01:Entidades reconhecidas:**
@@ -208,14 +208,11 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
 
 **6.04:Restrições e políticas organizacionais aplicadas ao modelo.**
 
-- Cada entidade possui um identificador único (id), utilizado para diferenciar seus registros.
-- As chaves estrangeiras devem corresponder a registros existentes nas entidades relacionadas.
-- Um notebook tem que estar vinculado a um colaborador cadastrado.
-- Um celular deve estar vinculado a um colaborador cadastrado.
-- Um notebook deve possuir uma marca cadastrada.
-- As informações de identificação dos equipamentos, como patrimônio e numero de serie, devem permitir identificar cada equipamento.
-- As validações devem estar vinculadas a um notebook existente.
-- A validação deve registrar a data e o responsável pela realização do procedimento.
+- Cada equipamento deve estar vinculado a um colaborador durante o período de utilização. 
+- Os registros de validação devem conter a data e o responsável pela validação.
+- Os equipamentos podem ser classificados com Celular ou Notebook.
+- Durante uma manutenção, o usuário deve ser informado sobre a indisponibilidade temporária do equipamento.
+- As alterações e validações dos equipamentos devem ser registradas para manter o histórico de controle. 
 
 ## 7. Diagrama Entidade-Relacionamento (DER)
 
