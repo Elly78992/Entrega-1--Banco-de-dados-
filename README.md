@@ -7,9 +7,9 @@
 - Maria Eduarda Kostkievicz Ferreira RGM:4790715-1
   
 ## 1. Caracterização da Organização
-- **Nome e natureza da organização:** TecNews 
+- **Nome e natureza da organização:** CNA, organização que utiliza recursos de TI, contando com o suporte da filial TecNews.
 - **Contexto e porte:**
-O CNA utiliza recursos da área de TI, para auxiliar em suas atividades. Utilizam serviços TecNews, no qual é uma empresa especializada em serviços de tecnologia da informação, sendo eles: Suporte N1 e N2, Service Desk e Help Desk, monitoração de links e sites, além de suporte e gerenciamento de redes. O volume é baixo; Quantidade de cadastros é menor que 1.000 linhas; As modificações dos dados é feita manualmente; As consultas e operações de leitura e escrita são de baixo volume.
+O CNA utiliza recursos da área de TI, para auxiliar em suas atividades. Utilizam serviços da TecNews, no qual é uma empresa especializada em serviços de tecnologia da informação, sendo eles: Suporte N1 e N2, Service Desk e Help Desk, monitoramento de links e sites, além de suporte e gerenciamento de redes. O volume é baixo; Quantidade de cadastros é menor que 1.000 linhas; As modificações dos dados é feita manualmente; As consultas e operações de leitura e escrita são de baixo volume.
 
 - **Problemas e necessidades identificados:**
 Já ocorreram situações de informações importantes serem perdidas, duplicadas ou estarem incorretas.
@@ -17,7 +17,7 @@ Antes do sistema atual, as informações eram controladas de maneira menos efica
 Não havia padronização para identificar o tempo necessário para encontrar informações.
 Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, integração, padronização, versionamento e controle das alterações.
  
-- **Justificativa da escolha:**
+- **Justificativa da escolha:** A CNA foi escolhida como organização na qual o nosso grupo teve acesso para o levantamento das informações. A pesquisa em campo foi realizada por meio de entrevista com um representante da filial TecNews, dessa forma, foi possível obter informações sobre a organização.  
 - **Evidências da organização:**
 ![Organização](Documentação-da-organização.jpg)
 ![Organização](Documentação-da-organização1.jpg)
@@ -51,12 +51,12 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
 
 ## 4. Regras de Negócio
 - **Regras operacionais:**
-- **RN01:** O acesso dos equipamentos deve ser vinculado a um usuario por vez, contendo seus registros. Em casos de alteraçoes, o sistema deve encerrar o processo anterior antes de registrar um novo dado.
-- **RNO2:** As alterações realizadas nos equipamentos, incluindo, manutenções, situações de uso e atualização de cadastro, deve ter um registro permanente dentro do histórico de validação. Cada tarefa deve obter a data, horário e identificador do usuário autorizado.
-- **RNO3:** Antes de haver manutenção dos equipamentos o sistema deve emitir um aviso prévio aos usuários informando o bloqueio temporário das maquinas para novas operações.           
+- **RE01:** O acesso dos equipamentos deve ser vinculado a um usuario por vez, contendo seus registros. Em casos de alteraçoes, o sistema deve encerrar o processo anterior antes de registrar um novo dado.
+- **REO2:** As alterações realizadas nos equipamentos, incluindo, manutenções, situações de uso e atualização de cadastro, deve ter um registro permanente dentro do histórico de validação. Cada tarefa deve obter a data, horário e identificador do usuário autorizado.
+- **REO3:** Antes de haver manutenção dos equipamentos o sistema deve emitir um aviso prévio aos usuários informando o bloqueio temporário das maquinas para novas operações.           
 
 - **Restrições organizacionais:**
-- **RNO1:** Durante o processo de manutenção, o sistema não pode registrar novos colaboradores e nem finalizar inventários ate que o serviço esteja finalizado.
+- **REO1:** Durante o processo de manutenção, o sistema não pode registrar novos colaboradores e nem finalizar inventários ate que o serviço esteja finalizado.
      
 ## 5. Dicionário de Dados Conceitual
 **5.01: Equipamento**
