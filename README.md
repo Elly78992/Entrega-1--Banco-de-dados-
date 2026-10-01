@@ -7,7 +7,7 @@
 - Maria Eduarda Kostkievicz Ferreira RGM:4790715-1
   
 ## 1. Caracterização da Organização
-- **Nome e natureza da organização:** CNA, que utiliza serviços da filial TecNews 
+- **Nome e natureza da organização:** TecNews 
 - **Contexto e porte:**
 O CNA utiliza recursos da área de TI, para auxiliar em suas atividades. Utilizam serviços TecNews, no qual é uma empresa especializada em serviços de tecnologia da informação, sendo eles: Suporte N1 e N2, Service Desk e Help Desk, monitoração de links e sites, além de suporte e gerenciamento de redes. O volume é baixo; Quantidade de cadastros é menor que 1.000 linhas; As modificações dos dados é feita manualmente; As consultas e operações de leitura e escrita são de baixo volume.
 
@@ -19,7 +19,9 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
  
 - **Justificativa da escolha:**
 - **Evidências da organização:**
-
+![Organização](Documentação-da-organização.jpg)
+![Organização](Documentação-da-organização1.jpg)
+  
 ## 2. Processos de Negócio
 - **Principais processos mapeados:** Levantamento e a atualização das informações em planilha dos computadores  e celulares da empresa. Mantendo a organização e atualizações em dia.
 - **Fluxogramas:** 
@@ -145,43 +147,43 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
  **6.01:Entidades reconhecidas:**
 
-   **Equipamento:** Representa os equipamentos tecnológicos utilizados pela organização, sendo celulares e notebooks.
+ -  **Equipamento:** Representa os equipamentos tecnológicos utilizados pela organização, sendo celulares e notebooks.
    
-   **Colaborador:** Representa os funcionários que utilizam os equipamentos e solicitam os serviços. 
+  - **Colaborador:** Representa os funcionários que utilizam os equipamentos e solicitam os serviços. 
 
-  **Celular:** Representa os aparelhos celulares disponibilizados pela organização aos colaboradores.
+ - **Celular:** Representa os aparelhos celulares disponibilizados pela organização aos colaboradores.
   
-  **Notebook:** Representa os notebooks utilizados pelos colaboradores.
+ - **Notebook:** Representa os notebooks utilizados pelos colaboradores.
 
-  **Marcas:** Representa as marcas dos notebooks cadastrados, permitindo organizar e identificar a marca de cada equipamento.
+ - **Marcas:** Representa as marcas dos notebooks cadastrados, permitindo organizar e identificar a marca de cada equipamento.
 
-  **Sistemas_operacionais:** Representa os sistemas operacionais utilizados nos equipamentos.
+ - **Sistemas_operacionais:** Representa os sistemas operacionais utilizados nos equipamentos.
 
-  **Validação:** Registra as validações realizadas nos equipamentos, permitindo acompanhar alterações e responsáveis.  
+ - **Validação:** Registra as validações realizadas nos equipamentos, permitindo acompanhar alterações e responsáveis.  
 
-  **Serviço:** Representa os serviços solicitados pelos colaboradores.
+ - **Serviço:** Representa os serviços solicitados pelos colaboradores.
 
-  **Fornecedores:** Representa as empresas ou organizações responsáveis pelo fornecimento dos equipamentos.  
+ - **Fornecedores:** Representa as empresas ou organizações responsáveis pelo fornecimento dos equipamentos.  
 
 **6.02:Atributos e classificações:**
 
-**Equipamento** = id, modelo, serial, patrimônio 
+ - **Equipamento** = id, modelo, serial, patrimônio 
 
-**Celular** = id, id_colaborador, Linha, Aparelho, Patrimônio, Serial_number, Imei_1, Imei_2
+- **Celular** = id, id_colaborador, Linha, Aparelho, Patrimônio, Serial_number, Imei_1, Imei_2
 
-**Notebook** = id, id_colaborador, Marca, Modelo, id_sistema_operacional, Serial, Hostname, Processador, RAM, HD, Garantia, Aquisição, Patrimônio, Situação
+- **Notebook** = id, id_colaborador, Marca, Modelo, id_sistema_operacional, Serial, Hostname, Processador, RAM, HD, Garantia, Aquisição, Patrimônio, Situação
 
-**Colaborador** = id, Nome, e-mail, Departamento, Sobrenome
+- **Colaborador** = id, Nome, e-mail, Departamento, Sobrenome
 
-**Marca** = id, Nome
+- **Marca** = id, Nome
 
-**Sistema Operacional** = id, Fabricação, Tipo, Versão
+- **Sistema Operacional** = id, Fabricação, Tipo, Versão
 
-**Fornecedores** = id, Nome, Cnpj, Contato
+- **Fornecedores** = id, Nome, Cnpj, Contato
 
-**Validação** = id, id_notebook, Data, Responsável
+- **Validação** = id, id_notebook, Data, Responsável
 
-**Serviço** = id, Tipo, Descrição, Serviço
+- **Serviço** = id, Tipo, Descrição, Serviço
 
 **6.03:Relacionamentos pertinentes:**
 
