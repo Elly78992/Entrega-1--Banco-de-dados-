@@ -144,6 +144,8 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
 | CNPJ | CNPJ do fornecedor | Identificar o fornecedor de forma única e possuir formato valido.|
 | Contato | Informação de contato do fornecedor | Deve conter um meio de contato valido.|
 
+![Dicionario](dicionariodedados.html)
+
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
  **6.01:Entidades reconhecidas:**
 
