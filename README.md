@@ -216,7 +216,7 @@ Com o sistema de banco de dados, passaram a existir maior controle, dinamismo, i
 
 ## 7. Diagrama Entidade-Relacionamento (DER)
 
-![DER](DER.png)
+![DER](DER.jpg)
 
 
 ## 8. Justificativa Técnica
