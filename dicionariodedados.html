@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicionário de Dados</title>
+    <style>
+        table{
+            width:50%;
+        }
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dicionário de Dados</h1>
+
+    <h2>Entidade: Equipamentos</h2>
+
+    <table style="width: 50%;">
+        <tr>
+            <th>Atributos</th>
+            <th>Descrição</th>
+            <th>Regra de negócio associada</th>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td>Identificador único do equipamento</td>
+            <td>Chave primária; deve ser único e obrigatório.</td>
+        </tr> 
+        <tr>
+            <td>Modelo</td>
+            <td>O modelo do equipamento</td>
+            <td>Deve identificar o modelo do equipamento cadastrado.</td>
+        </tr>
+        <tr>
+            <td>Serial</td>
+            <td>Numero da serie do equipamento</td>
+            <td>Deve identificar o equipamento de forma única.</td>
+        </tr>
+        <tr>
+            <td>Patrimônio</td>
+            <td>Numero do patrimônio atribuído ao equipamento</td>
+            <td>Deve identificar o patrimônio do equipamento e não deve se repetir.</td>
+        </tr>
+    </table>
+
+    <h2>Entidade: Notebook</h2>
+    <table style="width: 50%;">
+
+        <tr>
+            <th>Atributos</th>
+            <th>Descrição</th>
+            <th>Regra de negócio associada</th>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td>Identificador único do notebook</td>
+            <td>Chave primaria; deve ser único e obrigatório.</td>
+        </tr>
+        <tr>
+            <td>id_colaborador</td>
+            <td>Identifica o colaborador ao qual o notebook esta vinculado.</td>
+            <td>Chave estrangeira; deve referenciar um colaborador cadastrado.</td>
+        </tr>
+        <tr>
+            <td>Marca</td>
+            <td>Identifica a marca do notebook</td>
+            <td>Deve corresponder a uma marca cadastrada.</td>
+        </tr>
+        <tr>
+            <td>Modelo</td>
+            <td>Modelo especifico do notebook</td>
+            <td>Deve ser informado no cadastro do equipamento.</td>
+        </tr>
+        <tr>
+            <td>id_sistema_operacional</td>
+            <td>Identifica o sistema operacional instalado no notebook.</td>
+            <td>Chave estrangeira; deve referenciar um sistema operacional cadastrado.</td>
+        </tr>
+        <tr>
+            <td>Serial</td>
+            <td>Numero de serie utilizado para identificar o equipamento.</td>
+            <td>Deve identificar o notebook de forma unica.</td>
+        </tr>
+        <tr>
+            <td>Hostname</td>
+            <td>Nome utilizado para identificar o notebook na rede/sistema.</td>
+            <td>Deve ser informado para identificar o equipamento</td>
+        </tr>
+        <tr>
+            <td>Processador</td>
+            <td>Modelo do processador instalado no notebook.</td>
+            <td>Deve representar o processador do equipamento cadastrado.</td>
+        </tr>
+        <tr>
+            <td>RAM</td>
+            <td>Quantidade de memoria RAM do notebook.</td>
+            <td>Deve representar a capacidade de memoria instalada.</td>
+        </tr>
+        <tr>
+            <td>HD</td>
+            <td>Capacidade de armazenamento do notebook.</td>
+            <td>Deve representar a capacidade de armazenamento do equipamento.</td>
+        </tr>
+        <tr>
+            <td>Garantia</td>
+            <td>Informação sobre a garantia do notebook.</td>
+            <td>Deve registrar a situação ou período de garantia do equipamento.</td>
+        </tr>
+        <tr>
+            <td>Aquisição</td>
+            <td>Informação referente a aquisição do notebook.</td>
+            <td>Deve registrar a data ou informação de aquisição do equipamento.</td>
+        </tr>
+        <tr>
+            <td>Patrimônio</td>
+            <td>Numero do patrimônio atribuído ao notebook.</td>
+            <td>Deve identificar o patrimônio do equipamento e não deve se repetir.</td>
+        </tr>
+        <tr>
+            <td>Situação</td>
+            <td>O estado atual do notebook.</td>
+            <td>Deve indicar a situação atual do equipamento.</td>
+        </tr>
+    </table>
+
+    <h2>Colaborador</h2>
+    <table style="width: 50%;">
+    <tr>
+        <th>Atributos</th>
+        <th>Descrição</th>
+        <th>Regra de negócio associada </th>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Identificador único do colaborador</td>
+        <td>Chave primaria; deve ser único e obrigatório.</td>
+    </tr>
+    <tr>
+        <td>Nome</td>
+        <td>Nome do colaborador</td>
+        <td>Deve ser informado no cadastro.</td>
+    </tr>
+    <tr>
+        <td>Sobrenome</td>
+        <td>Sobrenome do colaborador</td>
+        <td>Deve ser informado no cadastro.</td>
+    </tr>
+    <tr>
+        <td>Departamento</td>
+        <td>Departamento em que o colaborador atua</td>
+        <td>Deve indicar o departamento ao qual o colaborador pertence</td>
+    </tr>
+    <tr>
+        <td>E-mail</td>
+        <td>Endereço de e-mail do colaborador</td>
+        <td>Deve ser um e-mail valido e associado ao colaborador.</td>
+    </tr>
+</table>
+
+<h2>Celular</h2>
+<table style="width: 50%;">
+<tr>
+    <th>Atributos</th>
+    <th>Descrição</th>
+    <th>Regra de negócio associada</th>
+</tr>
+<tr>
+    <td>id</td>
+    <td>Identificador único do celular</td>
+    <td>Chave primaria; deve ser único e obrigatório.</td>
+</tr>
+<tr>
+    <td>id_colaborador</td>
+    <td>Identifica o colaborador responsável pelo celular.</td>
+    <td>Chave estrangeira; deve referenciar um colaborador cadastrado.</td>
+</tr>
+<tr>
+    <td>Linha</td>
+    <td>Numero ou linha telefônica associada ao celular.</td>
+    <td>Deve identificar a linha utilizada no equipamento.</td>
+</tr>
+<tr>
+    <td>Aparelho</td>
+    <td>Modelo do aparelho celular.</td>
+    <td>Deve ser informado no cadastro.</td>
+</tr>
+<tr>
+    <td>Serial_Number</td>
+    <td>Numero de serie do aparelho.</td>
+    <td>Deve identificar o celular de forma única.</td>
+</tr>
+<tr>
+    <td>Imei_1</td>
+    <td>Primeiro IMEI do aparelho.</td>
+    <td>Deve corresponder ao IMEI do equipamento.</td>
+</tr>
+<tr>
+    <td>Imei_2</td>
+    <td>Segundo IMEI do aparelho.</td>
+    <td>Deve ser informado quando o aparelho possuir segundo IMEI.</td>
+</tr>
+</table>
+
+<h2>Marcas</h2>
+<table style="width: 50%;">
+    <tr>
+        <th>Atributos</th>
+        <th>Descrição</th>
+        <th>Regra de negócio associada</th>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Identificador único da marca</td>
+        <td>Chave primaria; deve ser único e obrigatório.</td>
+    </tr>
+    <tr>
+        <td>Nome</td>
+        <td>Nome da marca do equipamento</td>
+        <td>Deve ser informado e não deve haver marcas duplicadas.</td>
+    </tr>
+</table>
+
+<h2>Sistema Operacional</h2>
+<table style="width: 50%;">
+    <tr>
+        <th>Atributos</th>
+        <th>Descrição</th>
+        <th>Regra de negócio associada</th>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Identificador único do sistema operacional.</td>
+        <td>Chave primaria; deve ser único e obrigatório.</td>
+    </tr>
+    <tr>
+        <td>Fabricação</td>
+        <td>Empresa responsável pela fabricação/desenvolvimento do sistema operacional.</td>
+        <td>Deve ser informado no cadastro.</td>
+    </tr>
+    <tr>
+        <td>Tipo</td>
+        <td>Tipo ou categoria do sistema operacional</td>
+        <td>Deve representar o tipo correspondente ao sistema cadastrado.</td>
+    </tr>
+    <tr>
+        <td>Versão</td>
+        <td>Versão do sistema operacional</td>
+        <td>Deve identificar a versão instalada no equipamento.</td>
+    </tr>
+</table>
+
+<h2>Validação</h2>
+<table style="width: 50%;">
+    <tr>
+        <th>Atributos</th>
+        <th>Descrição</th>
+        <th>Regra de negócio associada</th>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Identificador único da validação.</td>
+        <td>Chave primaria; único e obrigatório.</td>
+    </tr>
+    <tr>
+        <td>id_notebook</td>
+        <td>Identifica o notebook que esta sendo validado.</td>
+        <td>Chave estrangeira; deve referenciar um notebook cadastrado.</td>
+    </tr>
+    <tr>
+        <td>Data</td>
+        <td>Data em que a validação foi realizada.</td>
+        <td>Deve conter uma data valida e ser registrada no momento da validação.</td>
+    </tr>
+    <tr>
+        <td>Responsável</td>
+        <td>Identifica o responsável pela realização da validação.</td>
+        <td>Deve registrar o responsável pela validação.</td>
+    </tr>
+</table>
+
+<h2>Serviço</h2>
+<table style="width: 50%;">
+    <tr>
+        <th>Atributos</th>
+        <th>Descrição</th>
+        <th>Regra de negócio associada</th>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Identificador único do serviço</td>
+        <td>Chave primária; deve ser único e obrigatório.</td>
+    </tr>
+    <tr>
+        <td>Tipo</td>
+        <td>Tipo do serviço solicitado</td>
+        <td>Deve indicar a categoria do serviço realizado ou solicitado.</td>
+    </tr>
+    <tr>
+        <td>Descrição</td>
+        <td>Detalhadamento do serviço</td>
+        <td>Descrever o serviço de forma clara.</td>
+    </tr>
+    <tr>
+        <td>Serviço</td>
+        <td>Nome ou identificação do serviço</td>
+        <td>Deve ser informado para identificar o serviço.</td>
+    </tr>
+</table>
+
+<h2>Fornecedor</h2>
+<table style="width: 50%;">
+    <tr>
+        <th>Atributos</th>
+        <th>Descrição</th>
+        <th>Regra de negócio associada</th>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Identificador único do Fornecedor</td>
+        <td>Chave primária; deve ser único e obrigatório.</td>
+    </tr>
+    <tr>
+        <td>Nome</td>
+        <td>Nome do fornecedor</td>
+        <td>Deve ser informado no cadastro.</td>
+    </tr>
+    <tr>
+        <td>CNPJ</td>
+        <td>CNPJ do fornecedor</td>
+        <td>Identificar o fornecedor de forma única e possuir formato valido.</td>
+    </tr>
+    <tr>
+        <td>Contato</td>
+        <td>Informação de contato do fornecedor</td>
+        <td>Deve conter um meio de contato valido.</td>
+    </tr>
+</table>
+</body>
+</html>
